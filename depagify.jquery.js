@@ -77,6 +77,9 @@
             // If threshold is a selector
             case 'string':
                 // Determine threshold's offset
+                if ($(options.threshold).offset() === null) {
+                    return false;
+                }
                 var offset = $(options.threshold).offset().top;
                 
                 break;
